@@ -1,112 +1,126 @@
-*{margin:0;padding:0;box-sizing:border-box}
+/* Keystone Concrete – FINAL VISUAL LOCK */
+
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-  background:#050505;
-  color:#f2f2f2;
-  line-height:1.6;
+  font-family:'Montserrat',sans-serif;
+  background:url("assets/img/background.png") center/cover fixed no-repeat;
+  color:#e8e8e8;
+  line-height:1.7;
 }
 
-.brand{
+/* TOP BAR */
+.topbar{
+  background:rgba(0,0,0,.85);
+  padding:16px 6%;
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+/* FULL WIDTH LOGO */
+.logo-section{
   text-align:center;
-  padding:60px 20px 40px;
-  background:#000;
+  background:rgba(0,0,0,.9);
 }
-.brand img{
-  width:460px;
-  max-width:95%;
-  margin-bottom:30px;
+.full-logo{
+  width:100%;
+  max-width:none;
+  display:block;
+  padding:40px 5%;
 }
-nav{
+
+/* NAV */
+.main-nav{
   display:flex;
   justify-content:center;
-  gap:36px;
+  gap:50px;
+  padding:22px 0;
 }
-nav a{
+.main-nav a{
+  color:#ddd;
+  text-decoration:none;
+  font-weight:500;
+  letter-spacing:.8px;
+}
+.main-nav a:hover,
+.main-nav a.active{
   color:#fff;
-  text-decoration:none;
-  font-weight:700;
-}
-nav a:hover{color:#d9b35f}
-
-.hero{position:relative}
-.hero img{
-  width:100%;
-  height:520px;
-  object-fit:cover;
-}
-.hero-text{
-  position:absolute;
-  bottom:50px;
-  left:50px;
-  background:rgba(0,0,0,.7);
-  padding:28px 34px;
-  border-radius:20px;
-}
-.btn{
-  display:inline-block;
-  margin-top:16px;
-  padding:14px 32px;
-  background:#d9b35f;
-  color:#000;
-  font-weight:800;
-  border-radius:999px;
-  text-decoration:none;
+  border-bottom:2px solid #cfcfcf;
 }
 
-section{
-  padding:90px 24px;
-  max-width:1200px;
-  margin:auto;
+/* CHROME HEADINGS (NOT GOLD) */
+h1,h2,h3{
+  background:linear-gradient(
+    180deg,
+    #f5f5f5 0%,
+    #cfcfcf 35%,
+    #ffffff 50%,
+    #bdbdbd 70%,
+    #f8f8f8 100%
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 6px 20px rgba(0,0,0,.8);
 }
-h2{
-  text-align:center;
-  font-size:42px;
-  margin-bottom:26px;
+
+/* SECTIONS */
+.section{
+  padding:120px 6%;
+  background:rgba(0,0,0,.75);
 }
-.grid{
+
+/* SERVICES */
+.services-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:26px;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
 }
-.grid div{
-  background:#111;
+.service{
+  background:rgba(0,0,0,.6);
+  border:1px solid rgba(255,255,255,.2);
+}
+.service-overlay{
   padding:30px;
-  border-radius:20px;
 }
 
-.gallery{
+/* GALLERY */
+.gallery-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
 }
-.gallery img{
+.gallery-grid img{
   width:100%;
   height:260px;
   object-fit:cover;
-  border-radius:18px;
+  border:1px solid rgba(255,255,255,.15);
 }
 
-form{
-  max-width:600px;
-  margin:auto;
-  display:grid;
-  gap:16px;
+/* CONTACT */
+.premium-contact input,
+.premium-contact textarea{
+  width:100%;
+  padding:18px;
+  margin-bottom:18px;
+  background:rgba(0,0,0,.8);
+  border:1px solid rgba(255,255,255,.2);
+  color:#fff;
 }
-input,textarea,button{
-  padding:14px;
-  border-radius:10px;
+.premium-contact button{
+  width:100%;
+  padding:18px;
+  background:#cfcfcf;
+  color:#000;
+  font-weight:700;
   border:none;
 }
-button{
-  background:#d9b35f;
-  font-weight:700;
-  cursor:pointer;
-}
 
+/* FOOTER */
 footer{
-  text-align:center;
-  padding:30px;
   background:#000;
+  padding:40px;
+  text-align:center;
   color:#aaa;
 }
