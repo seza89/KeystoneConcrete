@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keystone Concrete | Premium Concrete WA</title>
+
+<style>
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+  color:#eee;
+  background:
+    linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.9)),
+    url('assets/img/background.png') center/cover fixed no-repeat;
+  overflow-x:hidden;
+}
+
+/* ===== GLOBAL ===== */
+.container{max-width:1400px;margin:auto;padding:0 4%}
+.section{padding:120px 0}
+h1,h2{
+  font-family:"Cinzel","Playfair Display",serif;
+  background:linear-gradient(135deg,#ffd700,#f5e27a,#d9b35f);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-align:center;
+}
+h1{font-size:clamp(48px,7vw,92px)}
+h2{font-size:clamp(42px,6vw,78px);margin-bottom:50px}
+
+/* ===== TOP BAR ===== */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 4%;
+  background:rgba(0,0,0,.96);
+  border-bottom:1px solid rgba(255,215,0,.25);
+  font-size:15px;
+}
+.topbar a{color:#ddd;text-decoration:none;margin-left:20px}
+.topbar a:hover{color:#ffd700}
+
+/* ===== LOGO + NAV ===== */
+.logo-section{
+  background:rgba(0,0,0,.98);
+  text-align:center;
+  border-bottom:1px solid rgba(255,215,0,.35);
+}
+.full-logo{
+  width:100vw;
+  max-width:100%;
+  height:auto;
+  padding:40px 30px 25px;
+  display:block;
+}
+.main-nav{
+  display:flex;justify-content:center;gap:60px;
+  padding:22px 0 28px;
+}
+.main-nav a{
+  color:#eee;text-decoration:none;font-size:16px;
+  letter-spacing:1px;position:relative;
+}
+.main-nav a::after{
+  content:'';position:absolute;left:50%;bottom:-8px;
+  width:0;height:2px;background:#ffd700;
+  transform:translateX(-50%);transition:.35s;
+}
+.main-nav a:hover::after{width:100%}
+.main-nav a:hover{color:#ffd700}
+
+/* ===== HERO ===== */
+.hero{
+  height:75vh;min-height:520px;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+}
+.hero p{
+  font-size:22px;opacity:.9;margin:30px auto 45px;
+  max-width:720px;
+}
+.cta{
+  display:inline-block;
+  padding:20px 55px;
+  background:linear-gradient(135deg,#ffd700,#f5e27a);
+  color:#111;text-decoration:none;
+  font-weight:700;letter-spacing:1.2px;
+  border-radius:50px;
+}
+
+/* ===== ABOUT ===== */
+.about-grid{
+  display:grid;grid-template-columns:1.4fr 1fr;
+  gap:80px;align-items:center;
+}
+.about-text{font-size:20px;line-height:1.8}
+.about-images{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:25px;
+}
+.about-images img{
+  width:100%;height:260px;object-fit:cover;
+  border-radius:18px;border:1px solid rgba(255,255,255,.15);
+}
+
+/* ===== SERVICES ===== */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+  gap:50px;
+}
+.service{
+  position:relative;height:460px;overflow:hidden;
+  border-radius:26px;border:1px solid rgba(255,215,0,.35);
+}
+.service img{width:100%;height:100%;object-fit:cover}
+.service-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(transparent,rgba(0,0,0,.95));
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:40px;
+}
+.service-overlay h3{
+  font-size:30px;color:#ffd700;margin-bottom:12px;
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:30px;
+}
+.gallery-grid img{
+  width:100%;height:300px;object-fit:cover;
+  border-radius:22px;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.2fr;gap:80px;
+}
+.contact-info p{font-size:20px;margin-bottom:18px}
+form input,form textarea{
+  width:100%;padding:22px;margin-bottom:22px;
+  border-radius:18px;border:1px solid rgba(255,255,255,.25);
+  background:rgba(0,0,0,.85);color:#fff;font-size:17px;
+}
+form button{
+  width:100%;padding:22px;
+  background:linear-gradient(135deg,#ffd700,#f5e27a);
+  border:none;border-radius:22px;
+  font-size:18px;font-weight:700;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:50px 0;text-align:center;
+  background:rgba(0,0,0,.98);
+  border-top:1px solid rgba(255,215,0,.35);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .main-nav{gap:35px;flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>Over 20 Years Concrete Excellence • Greenough WA</div>
+  <div>
+    <a href="tel:0447848953">0447 848 953</a>
+    <a href="mailto:info@keystoneconcrete.com.au">info@keystoneconcrete.com.au</a>
+  </div>
+</div>
+
+<section class="logo-section" id="home">
+  <img src="assets/img/logo.png" class="full-logo" alt="Keystone Concrete">
+  <nav class="main-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</section>
+
+<section class="hero">
+  <div class="container">
+    <h1>Premium Concrete Craftsmanship</h1>
+    <p>Greenough • Geraldton • Perth Metro • Regional Western Australia</p>
+    <a href="#contact" class="cta">Request a Quote</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Us</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p><strong>Keystone Concrete</strong> is a family-run business with over 20 years’ experience delivering high-end residential, commercial and industrial concrete across WA.</p>
+        <p>Based in Greenough near Geraldton, we service Perth metro and regional projects with the same attention to quality and compliance.</p>
+      </div>
+      <div class="about-images">
+        <img src="assets/img/gallery/1.jpg">
+        <img src="assets/img/gallery/2.jpg">
+        <img src="assets/img/gallery/3.jpg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <img src="assets/img/gallery/4.jpg">
+        <div class="service-overlay">
+          <h3>House & Shed Slabs</h3>
+          <p>Engineered concrete slabs built to last.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="assets/img/gallery/5.jpg">
+        <div class="service-overlay">
+          <h3>Driveways & Pathways</h3>
+          <p>Functional, durable and clean finishes.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="assets/img/gallery/6.jpg">
+        <div class="service-overlay">
+          <h3>Retaining Walls</h3>
+          <p>Structural concrete retaining solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="container">
+    <h2>Project Gallery</h2>
+    <div class="gallery-grid">
+<img src="assets/img/gallery/1.jpg">
+<img src="assets/img/gallery/2.jpg">
+<img src="assets/img/gallery/3.jpg">
+<img src="assets/img/gallery/4.jpg">
+<img src="assets/img/gallery/5.jpg">
+<img src="assets/img/gallery/6.jpg">
+<img src="assets/img/gallery/7.jpg">
+<img src="assets/img/gallery/8.jpg">
+<img src="assets/img/gallery/9.jpg">
+<img src="assets/img/gallery/10.jpg">
+<img src="assets/img/gallery/11.jpg">
+<img src="assets/img/gallery/12.jpg">
+<img src="assets/img/gallery/13.jpg">
+<img src="assets/img/gallery/14.jpg">
+<img src="assets/img/gallery/15.jpg">
+<img src="assets/img/gallery/16.jpg">
+<img src="assets/img/gallery/17.jpg">
+<img src="assets/img/gallery/18.jpg">
+<img src="assets/img/gallery/19.jpg">
+<img src="assets/img/gallery/20.jpg">
+<img src="assets/img/gallery/21.jpg">
+<img src="assets/img/gallery/22.jpg">
+<img src="assets/img/gallery/23.jpg">
+<img src="assets/img/gallery/24.jpg">
+<img src="assets/img/gallery/25.jpg">
+<img src="assets/img/gallery/26.jpg">
+<img src="assets/img/gallery/27.jpg">
+<img src="assets/img/gallery/28.jpg">
+<img src="assets/img/gallery/29.jpg">
+<img src="assets/img/gallery/30.jpg">
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Phone:</strong> 0447 848 953</p>
+        <p><strong>Email:</strong> info@keystoneconcrete.com.au</p>
+        <p><strong>Location:</strong> Greenough WA (Geraldton Region)</p>
+      </div>
+      <form onsubmit="sendMail(event)">
+        <input required placeholder="Full Name">
+        <input required placeholder="Phone">
+        <input required type="email" placeholder="Email">
+        <textarea required placeholder="Project details"></textarea>
+        <button type="submit">Send Quote Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Keystone Concrete • Western Australia
+</footer>
+
+<script>
+function sendMail(e){
+  e.preventDefault();
+  location.href="mailto:info@keystoneconcrete.com.au?subject=Quote Request";
+}
+</script>
+
+</body>
+</html>
